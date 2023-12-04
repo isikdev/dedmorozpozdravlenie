@@ -44,6 +44,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
+    position: relative;
 }
 
 ul[class],
@@ -97,6 +98,13 @@ button {
             max-width: 860px;
             margin: 50px auto;
         }
+        h2 {
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+            max-width: 860px;
+            margin: 50px auto;
+        }
     }
     &__video-intro {
         margin: 10px 0;
@@ -117,6 +125,18 @@ button {
             margin: 20px;
         }
     }
+    &__vd-form-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__vd-item {
+        video {
+            max-width: 620px;
+            height: 100%;
+        }
+    }
     &__subtitle {
         margin: 50px 0;
         p {
@@ -124,12 +144,13 @@ button {
             text-align: center;
             margin: 10px auto;
             max-width: 720px;
+            font-size: 18px;
         }
     }
     &__subtitle-list {
         color: #fff;
         text-align: center;
-        font-size: 14px;
+        font-size: 18px;
         list-style: none;
     }
     &__form {
@@ -142,7 +163,7 @@ button {
             margin: 50px auto;
             border: 2px solid #237a57;
             padding: 50px;
-            h3 {
+            h2 {
                 color: #fff;
                 text-align: center;
                 margin: 10px 0;
@@ -177,6 +198,14 @@ button {
         }
     }
 }
+.social {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1%;
+    bottom: 19%;
+    z-index: 10000;
+}
 @media screen and (max-width: 860px) {
     .gyrlyanda {
         display: none;
@@ -203,46 +232,20 @@ button {
         border: 0px none;
         padding: 0;
     }
-}
-@function random_range($min, $max) {
-    $rand: random();
-    $random_range: $min + floor($rand * (($max - $min) + 1));
-    @return $random_range;
-}
-
-.snow {
-    $total: 200;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 100%;
-
-    @for $i from 1 through $total {
-        $random-x: random(1000000) * 0.0001vw;
-        $random-offset: random_range(-100000, 100000) * 0.0001vw;
-        $random-x-end: $random-x + $random-offset;
-        $random-x-end-yoyo: $random-x + ($random-offset / 2);
-        $random-yoyo-time: random_range(30000, 80000) / 100000;
-        $random-yoyo-y: $random-yoyo-time * 100vh;
-        $random-scale: random(10000) * 0.0001;
-        $fall-duration: random_range(10, 30) * 1s;
-        $fall-delay: random(30) * -1s;
-
-        &:nth-child(#{$i}) {
-            opacity: random(10000) * 0.0001;
-            transform: translate($random-x, -10px) scale($random-scale);
-            animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
+    .info__vd-item {
+        max-width: 100%;
+        margin: 0 auto;
+        video {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            max-width: 100%;
         }
-
-        @keyframes fall-#{$i} {
-            #{percentage($random-yoyo-time)} {
-                transform: translate($random-x-end, $random-yoyo-y) scale($random-scale);
-            }
-
-            to {
-                transform: translate($random-x-end-yoyo, 230vh) scale($random-scale);
-            }
-        }
+    }
+    .info__form {
+        margin: 0 auto;
+    }
+    .social {
+        right: 5%;
     }
 }
