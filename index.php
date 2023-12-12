@@ -37,11 +37,12 @@
                             <video src="./assets/video/osnovnoy.mp4" controls></video>
                         </div>
                         <div class="info__form">
-                            <form action="./assets/form-lesson/mail.php">
+                            <form action="./assets/form/mail.php" method="POST">
                                 <h2>Оставьте заявку</h2>
                                 <input type="text" placeholder="Ваше имя" name="user_name">
                                 <input type="email" placeholder="Ваша почта" name="user_email">
-                                <button type="submit">Отправить</button>
+                                <p>Нажимая на кнопку отправить вы соглашаетесь на <a href="https://dedmorozpozdravlenie.ru/assets/politics/politics.pdf">обработку персональных данных</a></p>
+                                <button type="submit" name="send">Отправить</button>
                             </form>
                         </div>
                     </div>
@@ -65,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="info__subtitle">
+                <div class="info__subtitle mt-5">
                     <p>Хотите заказать именное поздравление от Деда Мороза 2024 на Новый Год для Вашего ребенка
                         недорого?</p>
                     <p>
@@ -100,11 +101,12 @@
                     </div>
                 </div>
                 <div class="info__form">
-                    <form action="./assets/form-lesson/mail.php">
+                    <form action="./assets/form/mail.php" method="POST">
                         <h2>Оставьте заявку</h2>
                         <input type="text" placeholder="Ваше имя" name="user_name">
                         <input type="email" placeholder="Ваша почта" name="user_email">
-                        <button type="submit">Отправить</button>
+                        <p>Нажимая на кнопку отправить вы соглашаетесь на <a href="https://dedmorozpozdravlenie.ru/assets/politics/politics.pdf">обработку персональных данных</a></p>
+                        <button type="submit" name="send">Отправить</button>
                     </form>
                 </div>
             </div>
@@ -126,6 +128,19 @@
         if (mediaQuery.matches) {
             snow.stop()
         }
+        var _tmr = window._tmr || (window._tmr = []);
+        _tmr.push({ id: "3426970", type: "pageView", start: (new Date()).getTime() });
+        (function (d, w, id) {
+            if (d.getElementById(id)) return;
+            var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+            ts.src = "https://top-fwz1.mail.ru/js/code.js";
+            var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+            if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+        })(document, window, "tmr-code");
+        <noscript>
+            <div><img src="https://top-fwz1.mail.ru/counter?id=3426970;js=na" style="position:absolute;left:-9999px;"
+                alt="Top.Mail.Ru" /></div>
+        </noscript>
     </script>
 </body>
 

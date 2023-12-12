@@ -89,12 +89,15 @@ button {
     scroll-behavior: auto !important;
   }
 }
+.info__intro {
+  margin: 80px auto;
+}
 .info__content h1 {
   text-align: center;
   color: #fff;
   font-size: 34px;
   max-width: 860px;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 .info__content h2 {
   text-align: center;
@@ -102,9 +105,6 @@ button {
   font-size: 24px;
   max-width: 860px;
   margin: 50px auto;
-}
-.info__video-intro {
-  margin: 10px 0;
 }
 .info__video-intro h2 {
   text-align: center;
@@ -130,15 +130,12 @@ button {
   max-width: 620px;
   height: 100%;
 }
-.info__subtitle {
-  margin: 50px 0;
-}
 .info__subtitle p {
   color: #fff;
   text-align: center;
-  margin: 10px auto;
+  margin: 0px auto;
   max-width: 720px;
-  font-size: 18px;
+  font-size: 22px;
 }
 .info__subtitle-list {
   color: #fff;
@@ -191,6 +188,13 @@ button {
 .info__form form button:hover {
   opacity: 0.7;
 }
+.info__form form p {
+  color: #fff;
+  font-size: 12px;
+}
+.info__form form p a {
+  color: #fff;
+}
 
 .social {
   display: flex;
@@ -199,6 +203,10 @@ button {
   right: 1%;
   bottom: 19%;
   z-index: 10000;
+}
+
+.mt-5 {
+  margin: 50px auto;
 }
 
 @media screen and (max-width: 860px) {
